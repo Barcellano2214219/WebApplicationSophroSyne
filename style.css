@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Resources/Images/Copy of SophroSyne.svg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 180px;
+    cursor: pointer;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Search Bar */
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+  
+.search-button:hover {
+    background-color: #ddd;
+}
+  
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin: 100px auto;
+    position: relative;
+}
+  
+.search-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.search-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 0 10px;
+}
+  
+.search-container button:hover {
+    transform: translateY(-5px);
+}
+  
+.search-container img {
+    width: 20px;
+    height: 20px;
+    fill: #555;
+    transition: fill 0.3s;
+}
+  
+.search-container button:hover img {
+    fill: #007bff;
+}
+  
+.search-container input[type="text"] {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+  
+.search-container input[type="text"]::placeholder {
+    color: #ccc;
+}
+  
+.search-separator {
+    height: 20px;
+    border-left: 1px solid #ddd;
+    margin: 0 10px;
+}
+
+/* Upload File Button */
+.upload-button {
+    /* Add this line to make the button transparent */
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.upload-button-container {
+    position: absolute;
+    /* Set the bottom property to a value that moves the upload button upwards */
+    bottom: 180px;
+    left: 0;
+    right: 0;
+    /* Center the upload button both horizontally and vertically using the flex layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.upload-button-container:active {
+    /* Instead of using the transform property, use the scale property to maintain the original size of the upload button */
+    transform: scale(0.95);
+}
+
+.upload-button:hover {
+    transform: translateY(-5px);
+}
