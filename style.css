@@ -10,7 +10,7 @@
 .main {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Resources/Images/Copy of SophroSyne.svg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Resources/Images/IndexBackground.svg");
     background-size: cover;
     background-position: center;
 }
@@ -164,4 +164,98 @@
 
 .upload-button:hover {
     transform: translateY(-5px);
+}
+
+/* About Us CSS */
+
+.about-main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Resources/Images/AboutUsBackGround.svg");
+    background-size: cover;
+    background-position: center;
+}
+.about-navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 180px;
+    cursor: pointer;
+}
+.about-navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.about-navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.about-navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.about-navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* About Us Description */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.about-title {
+    margin: 50px 0;
+}
+
+.about-description {
+    margin: 50px 0;
+    text-align: left;
+    max-width: 500px;
+}
+
+/* About School Description */
+
+.school-info-container {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+}
+
+.school-image-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.school-image {
+    width: 100%;
+    height: auto;
+}
+
+.school-image-description {
+    flex: 2;
+}
+
+.school-image-description p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
 }
